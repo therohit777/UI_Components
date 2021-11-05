@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@500&display=swap');
+header{
+    top: 0;
+    position: sticky; 
+}
+nav{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    width: 100%;
+    background-color:#221A32;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    margin-left: 3%;
+    margin-top: 2vh;
+}
+.Logosname{
+    color: white;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 35px;
+}
+.colorlogo{
+    color: orangered;
+}
+nav ul{
+    margin-right: 5%;
+    margin-top: 6vh;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: orangered;
+}
+.hamburgmenu{
+    position: absolute;
+    font-size: 45px;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 940px) {
+
+    nav{
+        justify-content: center;
+    }
+    nav ul{
+          margin-left: 100%;
+          margin-right: 50%;
+          margin-top: 20%;
+          padding-left: 0;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 350px;
+          background-color: #221A32;
+          position: absolute;
+          visibility: hidden;
+          border-radius: 10px;
+    }
+    .hamburgmenu{
+        visibility: visible;
+        margin-left:80% ;
+        margin-top: 4.5vh;
+        cursor: pointer;
+    }
+    .showup{
+        visibility: visible;
+        transition: ease;
+        animation: navit 0.6s linear normal;
+    }
+
+    @keyframes navit {
+        0%{
+            transform: translateY(-100px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    nav ul{
+        margin-top: 35%;
+    }
+    
+}
